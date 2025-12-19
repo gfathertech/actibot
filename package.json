@@ -1,0 +1,26 @@
+{
+  "name": "whatsapp-bot",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Advanced WhatsApp Bot with MongoDB and Plugin System",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "@hapi/boom": "^10.0.0",
+    "baileys": "^7.0.0-rc.9",
+    "chalk": "^4.1.2",
+    "crypto": "^1.0.1",
+    "file-type": "^18.0.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "mongoose": "^8.0.0",
+    "node-webpmux": "^3.1.0",
+    "pino": "^8.15.0",
+    "util": "^0.12.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
