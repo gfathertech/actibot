@@ -1,6 +1,19 @@
 import { spawn } from 'child_process';
 import path from 'path';
 import { fileURLToPath } from 'url';
+// In your main.js, update these paths:
+const SESSIONS_DIR = process.env.SESSIONS_DIR || './sessions';
+const DATA_DIR = process.env.DATA_DIR || './data';
+
+// Make sure these directories exist
+import fs from 'fs';
+if (!fs.existsSync(SESSIONS_DIR)) {
+    fs.mkdirSync(SESSIONS_DIR, { recursive: true });
+}
+if (!fs.existsSync(DATA_DIR)) {
+    fs.mkdirSync(DATA_DIR, { recursive: true });
+}
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -74,4 +87,5 @@ function startBot() {
 }
 
 // Start the bot
+
 startBot();
